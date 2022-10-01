@@ -7,7 +7,7 @@
     </head>
     <body>
         <center>
-        <div id="topbar">WeatherAPP<span id="searchicon">🔍</span></div>
+        <div id="topbar">WEATHER APP<span id="searchicon">🔍</span></div>
         
         <div id="searchbox">
             <input type="text" id="search" placeholder="Enter City Name">
@@ -171,14 +171,15 @@ input, button {
 }
 
 #topbar, #searchbox, #more, #forecastlabel, #forecast #date, #footer {
-    background-color: #373737;
+    background-color: #e1168c;
     color: white;
+    border-radius: 10px;
 }
 
 #topbar {
     font-size: 25px;
     font-weight: bold;
-    color: black;
+    color: rgb(249, 222, 48);
     padding: 8px;
 }
 
@@ -198,6 +199,9 @@ input, button {
     background-color: #0096c9;
     border: 2px solid #0096c9;
     width: 80px;
+}
+#searchicon:hover{
+transform: scaleY(1.2);
 }
 
 #topbar #searchicon {
