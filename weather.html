@@ -14,9 +14,11 @@
             <button>Search</button>
             
         </div>
-        <img style="height: 400px;width: 400px; margin-top: 100px" src="image.png" alt="image not found">
+          
+        <img id="pic" style="height: 400px;width: 400px; margin-top: 100px" src="image.png" alt="image not found">
+    
             <div id="mainbody">
-                <img>
+                <!-- <img> -->
                 <span id="city"></span>
                 <br /><br /><br /><br />
                 <span id="temp"></span>
@@ -160,18 +162,18 @@ $(function() {
         @import url('https://fonts.googleapis.com/css2?family=Zilla+Slab&display=swap');
 body {
     font-family: 'Zilla Slab', sans-serif;
-   background-color: #0099cc;
+   background-color: #4ae380;
 }
 
 input, button {
     font-family: 'Zilla Slab', sans-serif;
     font-weight: bold;
     font-size: 16px;
-    color: black;
+    color: rgb(223, 214, 214);
 }
 
 #topbar, #searchbox, #more, #forecastlabel, #forecast #date, #footer {
-    background-color: #373737;
+    background-color: #3b56f1;
     color: white;
 }
 
@@ -229,7 +231,15 @@ input, button {
 }
 
 #mainbody img {
-    float: right;
+    float: right;}
+    #pic{
+    transition: transform .2s; /* Animation */
+  width: 600px;
+  height: 200px;
+  margin: 0 auto;
+}
+#pic:hover{
+    transform: scale(1.2);
 }
 
 #temp {
@@ -251,7 +261,10 @@ input, button {
     height: 25px;
     border-radius: 8px;
 }
-
+#more:hover{
+    color: aliceblue;
+    background-color: orange;
+}
 #more #label {
     float: left;
     padding-left: 5px;
