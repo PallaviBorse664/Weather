@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<!--
+    Weather App
+    √. Created By Shah Fahad
+    √. On 3 May 2020
+    √. Default City is Islamabad
+    √. Search Your own City for results
+    √. Upvote if you liked the code
+-->
+    <head>
+    
+        <title>Weather App</title>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    </head>
+    <body>
+        <center>
+        <div id="topbar">WeatherAPP<span id="searchicon">🔍</span></div>
+        
+        <div id="searchbox">
+            <input type="text" id="search" placeholder="Enter City Name">
+            <button>Search</button>
+            
+        </div>
+            <div id="mainbody">
+                <img>
+                <span id="city"></span>
+                <br /><br /><br /><br />
+                <span id="temp"></span>
+                <span id="cond">&nbsp;</span>
+                <br /><br /><br />
+                <center>
+                <div id="more">
+                <span id="label">Chance of Rain: </span><span id="chanceofrain">&nbsp;</span>
+                </div>
+                <div id="more">
+                <span id="label">Feel Like: </span><span id="feel">&nbsp;</span>
+                </div>
+                
+                <div id="more">
+                <span id="label">Humidity: </span><span id="humidity">&nbsp;</span>
+                </div>
+                <div id="more">
+                <span id="label">Wind: </span><span id="wind">&nbsp;</span>
+                </div>
+                <div id="more">
+                <span id="label">Direction: </span><span id="direction">&nbsp;</span>
+                </div>
+                <span>Last Updated: </span><span id="update">&nbsp;</span>
+                </center>
+            </div>
+            <br />
+            <h2 id="forecastlabel"></h2>
+            <div id="forecasttable">
+            </div>
+            <div id='footer'>
+                Made By Shah Fahad
+            </div>
+            </center>
+        </body>
+    </html>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Zilla+Slab&display=swap');
+body {
+    font-family: 'Zilla Slab', sans-serif;
+   background-color: #0096c9;
+}
+
+input, button {
+    font-family: 'Zilla Slab', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    color: white;
+}
+
+#topbar, #searchbox, #more, #forecastlabel, #forecast #date, #footer {
+    background-color: #373737;
+    color: white;
+}
+
+#topbar {
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    padding: 8px;
+}
+
+#searchbox {
+    padding: 10px;
+    display: none;
+}
+
+#searchbox input {
+    height: 25px;
+    color: #373737;
+    width: 200px;
+}
+
+#searchbox button {
+    height: 31px;
+    background-color: #0096c9;
+    border: 2px solid #0096c9;
+    width: 80px;
+}
+
+#topbar #searchicon {
+    float: right;
+}
+
+#mainbody {
+    color: white;
+    
+    width: 300px;
+    text-align: center;
+    animation: appear 1s 1;
+}
+
+#forecast {
+    width: 300px;
+    height: 350px;
+    border: 1.5px solid white;
+    color: white;
+    animation: forecast 1s 1;
+    border-radius: 10px;
+}
+
+#city {
+    font-size: 40px;
+    text-align: left;
+    padding-top: 7px;
+    padding-left: 10px;
+}
+
+#mainbody img {
+    float: right;
+}
+
+#temp {
+    float: right;
+    font-size: 25px;
+    padding-right: 2px;
+    font-weight: bold;
+}
+#cond {
+    float: left;
+    font-size: 18px;
+    padding-left: 5px;
+}
+
+#more {
+    width: 250px;
+    padding: 5px;
+    margin: 5px;
+    height: 25px;
+    border-radius: 8px;
+}
+
+#more #label {
+    float: left;
+    padding-left: 5px;
+}
+
+#wind {
+    text-align: right;
+}
+
+#forecast img {
+    height: 45px;
+    width: 45px;
+    float: left;
+}
+
+
+#forecast #date {
+    color: white;
+    font-size: 24px;
+    padding: 5px;
+    border-radius: 6px;
+    padding-top: 0px;
+}
+
+#forecast #avgtemp {
+    float: right;
+    padding-top: 3px;
+    font-size: 23px;
+}
+
+#forecast #summary {
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+
+#wind, #direction, #humidity, #feel, #avghumidity, #rainchance, #sunrise, #sunset, #moonrise, #moonset, #chanceofrain {
+    float: right;
+}
+
+#forecastlabel {
+    color: white;
+    padding: 5px;
+}
+
+#forecast #top {
+    height: 45px;
+    padding: 5px;
+}
+
+#footer {
+    font-size: 18px;
+    color: white;
+    padding: 8px;
+}
+
+@keyframes appear {
+    from {
+        width: 0px;
+    }
+    to {
+    
+    width: 300px;
+    }
+}
+
+@keyframes forecast {
+    from {
+        height: 0px;
+        width: 0px;
+    }
+    to {
+        height: 420px;
+        width: 300px;
+    }
+    
+}
